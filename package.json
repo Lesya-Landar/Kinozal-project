@@ -17,6 +17,6 @@
     "sort-css-media-queries": "^1.4.3"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.0"
   }
 }
