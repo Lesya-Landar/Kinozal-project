@@ -30,10 +30,10 @@ const plugins = [
 ];
 
 function scss() {
-  return src(path.scssFile).
+  return src(path.scssFile, {sourcemaps: true}).
     pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).
     pipe(postcss(plugins)).
-    pipe(dest(path.cssFolder)).
+    pipe(dest(path.cssFolder, {sourcemaps: true})).
     pipe(notify({
       message: 'Compiled!',
       sound: false
