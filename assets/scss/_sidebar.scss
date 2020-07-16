@@ -1,0 +1,141 @@
+.left-sidebar {
+    @extend %margin-bottom;
+
+    .panel:last-of-type {
+         margin: 0;
+    }
+}
+
+
+.vertical-slider {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.site-news-item {
+    position: relative;
+    clear: both;
+
+    &:not(:last-child) {
+        margin-bottom: $gap;
+        min-height: 85px;
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            width: calc(100% - 85px);
+            background-color: $color-gray;
+            height: 1px;
+        }
+    }
+
+    &:hover {
+        .site-news-item__title {
+            color: $color-accent;
+        }
+
+        .site-news-item__image {
+            background-color: $color-accent;
+        }
+    }
+
+   
+
+   
+
+    &__image {
+        width: 75px;
+        float: left;
+        margin: 0 10px 10px 0;
+        transition: background-color 0.5s;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        color: $color-primary;
+        transition: 0.5s;
+        @include block-shortener (1rem,1.5, 50px, 2);
+    }
+
+    &__date {
+        text-align: right;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        color: darken($color-gray, 30%);
+    }
+
+    &__link {
+        position: absolute;
+        display: block;
+
+       @include abs-position;
+
+      
+
+    }
+}
+
+
+.top-films {
+   &__body {
+       padding-left: 0;
+       padding-right: 0;
+   } 
+
+   &__list {
+       margin: 0;
+   }
+
+   &__item {
+       position: relative;
+       margin-right: -1px;
+       margin-left: -1px;
+       padding: 0;
+       border-top: 1px solid $color-gray;
+       border-left: 0;
+       border-right: 0;
+       border-bottom: 0;
+       background-color: transparent;
+
+       &:first-child {
+           border-top: 0;
+           border-radius: 0;
+       }
+
+       &:last-child {
+           border-radius: 0;
+       }
+
+       &:hover {
+           background-color: $color-accent;
+
+           a {
+               color: $color-light;
+           }
+
+           span {
+               background-color: $color-gray;
+           }
+       }
+   }
+
+   &__link {
+display: block;
+padding: 10px 50px 10px $gap;
+   }
+
+   &__badge {
+       position: absolute;
+       right: 10px;
+       top: 50%;
+       transform: translateY(-25%);
+   }
+}
+
+
