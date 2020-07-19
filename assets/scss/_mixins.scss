@@ -51,3 +51,25 @@
   bottom: 0;
   left: 0;
 }
+
+@mixin  section-title {
+
+  margin-bottom: $gap;
+  padding-left: $gap / 2;
+  padding-right: $gap / 2;
+
+  &__title {
+      @include text-shortener;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+
+  }
+
+  &__thumbnail {
+      margin-bottom: 0px;
+  }
+ 
+}
+
