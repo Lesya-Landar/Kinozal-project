@@ -62,6 +62,12 @@
 .top-films {
     position: relative;
     overflow: hidden;
+
+    &__body {
+        @include sm {
+            padding-bottom: 15px;
+        }
+    }
 }
 
 .top-films-item__img {
@@ -105,7 +111,11 @@
 
 
 .user-login {
+    margin-bottom: 30px;
+@include md {
     margin-bottom: 60px;
+}
+
 }
 
 

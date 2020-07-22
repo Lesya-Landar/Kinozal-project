@@ -3,6 +3,11 @@
     color: #fbfbfb;
     background-color: #232323;
     min-height: 266px;
+    margin-top: -14px;
+
+    @include md {
+        margin-top: -1px;
+    }
     
     
     
@@ -26,10 +31,22 @@
     text-align: center;
     padding-top: 3px;
 
+    @include md {
+        padding-top: 0px;
+    }
+
+    @include sm {
+      margin: 23px 0 20px 0;  
+      padding-bottom: 2px;
+    //   padding-top: 2px;
+    }
+
+
+
     & a {
         color: #fbfbfb;
-}
     }
+}
  
    
 

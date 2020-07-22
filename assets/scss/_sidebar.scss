@@ -1,6 +1,10 @@
 .left-sidebar {
     @extend %margin-bottom;
 
+    @include sm {
+        margin-bottom: 81px;
+    }
+
     .panel:last-of-type {
          margin: 0;
     }
