@@ -6,10 +6,9 @@
     }
 
     .panel:last-of-type {
-         margin: 0;
+        margin: 0;
     }
 }
-
 
 .vertical-slider {
     overflow: hidden;
@@ -26,7 +25,6 @@
     &:not(:last-child) {
         margin-bottom: $gap;
         min-height: 85px;
-
 
         &::after {
             content: "";
@@ -49,10 +47,6 @@
         }
     }
 
-   
-
-   
-
     &__image {
         width: 75px;
         float: left;
@@ -64,7 +58,7 @@
         margin-bottom: 10px;
         color: $color-primary;
         transition: 0.5s;
-        @include block-shortener (1rem,1.5, 50px, 2);
+        @include block-shortener(1rem, 1.5, 50px, 2);
     }
 
     &__date {
@@ -77,68 +71,62 @@
         position: absolute;
         display: block;
 
-       @include abs-position;
-
-      
-
+        @include abs-position;
     }
 }
 
-
 .top-films {
-   &__body {
-       padding-left: 0;
-       padding-right: 0;
-   } 
+    &__body {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-   &__list {
-       margin: 0;
-   }
+    &__list {
+        margin: 0;
+    }
 
-   &__item {
-       position: relative;
-       margin-right: -1px;
-       margin-left: -1px;
-       padding: 0;
-       border-top: 1px solid $color-gray;
-       border-left: 0;
-       border-right: 0;
-       border-bottom: 0;
-       background-color: transparent;
+    &__item {
+        position: relative;
+        margin-right: -1px;
+        margin-left: -1px;
+        padding: 0;
+        border-top: 1px solid $color-gray;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        background-color: transparent;
 
-       &:first-child {
-           border-top: 0;
-           border-radius: 0;
-       }
+        &:first-child {
+            border-top: 0;
+            border-radius: 0;
+        }
 
-       &:last-child {
-           border-radius: 0;
-       }
+        &:last-child {
+            border-radius: 0;
+        }
 
-       &:hover {
-           background-color: $color-accent;
+        &:hover {
+            background-color: $color-accent;
 
-           a {
-               color: $color-light;
-           }
+            a {
+                color: $color-light;
+            }
 
-           span {
-               background-color: $color-gray;
-           }
-       }
-   }
+            span {
+                background-color: $color-gray;
+            }
+        }
+    }
 
-   &__link {
-display: block;
-padding: 10px 50px 10px $gap;
-   }
+    &__link {
+        display: block;
+        padding: 10px 50px 10px $gap;
+    }
 
-   &__badge {
-       position: absolute;
-       right: 10px;
-       top: 50%;
-       transform: translateY(-50%);
-   }
+    &__badge {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
-
-

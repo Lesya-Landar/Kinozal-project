@@ -1,5 +1,5 @@
 .main {
-   margin-bottom: 80px;  
+    margin-bottom: 80px;
 }
 
 .site-search {
@@ -11,32 +11,36 @@
 }
 
 .user-login {
-   margin-bottom: $gap * 2; 
+    margin-bottom: $gap * 2;
+    @include md {
+        margin-bottom: 60px;
+    }
 }
+
 .new-films {
     overflow: hidden;
-    
-}
 
-.new-films-item__img {
-    width: 100%;
-}
-
-.new-films-row {
-    margin-right: -$gap / 2;
-    margin-left: -$gap / 2;
-}
-
-.new-films-item {
-
-    @include section-title;
-    
-
-    &__thumbnail {
-    transition: background-color 0.25s;
+    &-row {
+        margin-right: -$gap / 2;
+        margin-left: -$gap / 2;
     }
 
-    
+    &-item {
+        @include section-title;
+
+        &__thumbnail {
+            transition: background-color 0.25s;
+            &:hover {
+                border-color: $color-accent;
+                background-color: $color-accent;
+                color: $color-light;
+            }
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
 }
 
 .new-films-item:hover h3,
@@ -45,19 +49,10 @@
 }
 
 .top-films-item__thumbnail:hover {
-    border-color: #df8a13;
-    background-color: #df8a13;
+    border-color: $color-accent;
+    background-color: $color-accent;
     color: $color-light;
 }
-
-
-.new-films-item__thumbnail:hover {
-    border-color: #df8a13;
-    background-color: #df8a13;
-    color: $color-light;
-}
-
-
 
 .top-films {
     position: relative;
@@ -68,56 +63,40 @@
             padding-bottom: 15px;
         }
     }
-}
 
-.top-films-item__img {
-    width: 100%;
-}
+    &-item {
+        @include section-title;
 
-.top-films-item {
-
-    @include section-title;
-
-    &__thumbnail {
-        transition: background-color 0.25s;
+        &__thumbnail {
+            transition: background-color 0.25s;
         }
-   
-}
 
-.top-films-row {
-    margin-right: -$gap / 2;
-    margin-left: -$gap / 2;
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &-row {
+        margin-right: -$gap / 2;
+        margin-left: -$gap / 2;
+    }
 }
 
 .films-news {
     position: relative;
     overflow: hidden;
+
+    &-item__button {
+        float: right;
+        margin-bottom: 30px;
+        transition: background-color 0.25s;
+    }
+
+    &-item__info {
+        text-align: justify;
+    }
+
+    &-item:hover .thumbnail {
+        background-color: #f0ad4f;
+    }
 }
-
-.films-news-item__button {
-    float: right;
-    margin-bottom: 30px;
-    transition: background-color 0.25s;
-}
-
-.films-news-item__info {
-    text-align: justify;
-}
-
-
-.films-news-item:hover .thumbnail {
-    background-color: #f0ad4f;
-}
-
-
-.user-login {
-    margin-bottom: 30px;
-@include md {
-    margin-bottom: 60px;
-}
-
-}
-
-
-
-
